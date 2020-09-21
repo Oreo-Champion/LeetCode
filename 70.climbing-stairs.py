@@ -24,6 +24,12 @@ class Solution:
     #     return ans
     
     # def climbStairs(self, n: int) -> int:
+    #     p = 0
+    #     for i in range(n//2 + 1):
+    #         p += math.comb(n - i, i)
+    #     return p
+    
+    # def climbStairs(self, n: int) -> int:
     #     if n == 1:
     #         return 1
     #     elif n == 2:
@@ -49,6 +55,7 @@ class Solution:
         for i in range(2, n+1):
             ans[i] = ans[i-1] + ans[i-2]
         return ans[-1]
+
 # @lc code=end
 assert Solution().climbStairs(35) == 14930352
 # print(Solution().climbStairs(2))
